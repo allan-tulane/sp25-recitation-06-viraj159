@@ -15,8 +15,13 @@ def fib_recursive(n, counts):
 
     
 def fib_top_down(n, fibs):
-    ###TODO
-    pass
+    if fibs[n] != -1:
+        return fibs[n]
+    if n == 0 or n == 1:
+        fibs[n] = n
+    else:
+        fibs[n] = fib_top_down(n-1, fibs) + fib_top_down(n-2, fibs)
+    return fibs[n]
 
 
 def fib_bottom_up(n):
