@@ -15,6 +15,6 @@ Place all written answers from `recitation-07.md` here for easier grading.
 
 - **4) When inspecting the counts list after running fib_recursive(n, counts), an interesting pattern emerges: the number of times each Fibonacci number i is computed corresponds to the (n−i)th Fibonacci number. In other words, counts[i] is equal to the number of times fib_recursive(i, counts) was called, and this value is equal to Fibonacci(n−i+1). This pattern reflects the recursive structure of the algorithm, where smaller Fibonacci values are recomputed many times. For example, when computing fib_recursive(5), the number of times fib_recursive(0) is called is equal to F(6), the number of times fib_recursive(1) is called is F(5), and so on, decreasing as i increases. 
 
-- **6)**
+- **6) In the fib_top_down algorithm, each value fib_top_down(i) is computed at most once for any i from 0 to n. This is because once a value F_i is computed, it is stored in the fibs list and reused in future calls. Therefore, the maximum number of times fib_top_down(i) is called for any value i is 1. As a result, the work of the algorithm is O(n), since we compute each Fibonacci number from 0 to n exactly once, and each computation takes constant time after recursive calls are resolved. The span of the algorithm is O(n) as well, because the recursive calls depend on the results of smaller values, and fib_top_down(n) calls fib_top_down(n-1) and fib_top_down(n-2). So the longest chain of dependent computations is linear in n.
 
 - **8)**
