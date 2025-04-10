@@ -25,9 +25,12 @@ def fib_top_down(n, fibs):
 
 
 def fib_bottom_up(n):
-    ###TODO
-    pass
-
+    fibs = [0] * (n + 1)
+    if n > 0:
+        fibs[1] = 1
+    for i in range(2, n + 1):
+        fibs[i] = fibs[i - 1] + fibs[i - 2]
+    return fibs[n]
 
 
 
